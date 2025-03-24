@@ -1,33 +1,60 @@
 /* BODY */
+:root {
+  /* Material Design Color Palette - Masculine Theme */
+  --primary: #2962ff;
+  --primary-light: #768fff;
+  --primary-dark: #0039cb;
+  --secondary: #455a64;
+  --secondary-light: #718792;
+  --secondary-dark: #1c313a;
+  --surface: #ffffff;
+  --background: #f5f5f5;
+  --text-on-light: rgba(0, 0, 0, 0.87);
+  --text-secondary: rgba(0, 0, 0, 0.6);
+  --text-on-dark: #ffffff;
+  --error: #B00020;
+  
+  /* Material Elevation Shadows */
+  --elevation-1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  --elevation-2: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  --elevation-3: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  --elevation-4: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  
+  /* Material Design spacing - 8px grid */
+  --spacing-unit: 8px;
+  --spacing-1: calc(var(--spacing-unit) * 1);
+  --spacing-2: calc(var(--spacing-unit) * 2); /* 16px */
+  --spacing-3: calc(var(--spacing-unit) * 3); /* 24px */
+  --spacing-4: calc(var(--spacing-unit) * 4); /* 32px */
+}
+
 html{
     font-size: 100%;
     line-height: 1.2rem;
-    /* text-size adjust is to maintain the text-size even when the users rotates their phone to landscape view */
     -webkit-text-size-adjust: 100%;
-    /* Firefox supports only the android version and safari supports only the ios version at the moment according to MDN (2023)*/
     -moz-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
 
 body {
-    background-color: rgba(253, 244, 244, 30%);
-    font-family: 'Montserrat', Arial, sans-serif;
+    background-color: var(--background);
+    font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
     margin: 0px;
+    color: var(--text-on-light);
 }
 /*-------------------------------------------*/
 
 /* GENERAL */
 /* Fonts */
 .large{
-    font-weight: normal;
-    line-height: normal;
-    font-family: 'Oswald', Arial, sans-serif;
-    font-size: 5rem;
-    letter-spacing: 4px;
-    font-weight: bold;
+    font-weight: 700;
+    line-height: 1.2;
+    font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+    font-size: 4rem;
+    letter-spacing: 2px;
     text-transform: uppercase;
     margin: 0px;  
-    background-image: linear-gradient(135deg, rgb(250, 113, 283)0%, rgb(255, 142, 134)60%);
+    background-image: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -35,43 +62,46 @@ body {
 }
 
 .medium-spacing{
-    font-weight: normal;
-    line-height: normal;
-    font-family: 'Oswald', Arial, sans-serif;
-    font-size: 4rem;
-    letter-spacing: 4px;
+    font-weight: 500;
+    line-height: 1.2;
+    font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+    font-size: 3.5rem;
+    letter-spacing: 2px;
     margin: 0px;
 }
 
 .medium-spacing-halfsize{
-    font-weight: normal;
-    line-height: normal;
-    font-family: 'Oswald', Arial, sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+    font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
     font-size: 2rem;
-    letter-spacing: 4px;
+    letter-spacing: 1px;
     margin: 0px;
 }
 
 .main-title-large{
-    font-weight: normal;
-    line-height: normal;
-    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 2.5rem;
 }
 
 .main-title{
-    font-weight: normal;
-    line-height: normal;
+    font-weight: 500;
+    line-height: 1.2;
     font-size: 1.5rem;
 }
 
 .small{
-    font-weight: normal;
-    font-size: 0.7rem;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
 }
 
 .quote{
-    font-family: 'Covered By Your Grace', cursive, sans-serif;
+    font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
     font-size: 1.5em;
+    font-style: italic;
+    color: var(--secondary);
 }
 
 .uppercase{
@@ -83,39 +113,45 @@ body {
 }
 
 .bold{
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .colorful-letter{
-    background-image: linear-gradient(135deg, rgb(250, 113, 283)0%, rgb(255, 142, 134)60%);
+    background-image: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 /* Background colors */
-.baby-pink{
-    background-color: rgba(253, 129, 187, 0.3);
-    margin: 20px auto;
-    padding: 20px;
+.accent-panel{
+    background-color: var(--primary-light);
+    color: var(--text-on-dark);
+    margin: var(--spacing-3) auto;
+    padding: var(--spacing-3);
     text-align: center;
+    border-radius: 4px;
+    box-shadow: var(--elevation-1);
 }
 
-.baby-pink-light{
-    background-color: rgba(243, 162, 200, 0.3);
-    margin: 20px auto;
-    padding: 20px;
+.secondary-panel{
+    background-color: var(--secondary-light);
+    color: var(--text-on-dark);
+    margin: var(--spacing-3) auto;
+    padding: var(--spacing-3);
     text-align: center;
+    border-radius: 4px;
+    box-shadow: var(--elevation-1);
 }
 
 /* Setting alignments and sizing */
 /* for the flexbox */
 .wrapper{
-    max-width: 900px;
+    max-width: 1200px;
     margin: auto;
-    padding: 20px;
+    padding: var(--spacing-3);
     display: flex;
-    gap: 20px 20px;
+    gap: var(--spacing-3);
 }
 
 .column{
@@ -131,13 +167,13 @@ body {
 .grid-system-2{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: var(--spacing-3);
 }
 
 .grid-system-4{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--spacing-3);
 }
 
 /* other */
@@ -166,23 +202,23 @@ body {
 }
 
 .padding{
-    padding: 20px;
+    padding: var(--spacing-3);
 }
 
 .padding-top{
-    padding-top: 20px;
+    padding-top: var(--spacing-3);
 }
 
 .padding-right{
-    padding-right: 20px;
+    padding-right: var(--spacing-3);
 }
 
 .padding-bottom{
-    padding-bottom: 20px;
+    padding-bottom: var(--spacing-3);
 }
 
 .padding-left{
-    padding-left: 20px;
+    padding-left: var(--spacing-3);
 }
 
 .margin-auto{
@@ -190,7 +226,7 @@ body {
 }
 
 .margin-trbl10{
-    margin: 10px;
+    margin: var(--spacing-2);
 }
 
 /* for sticky bottom button */
@@ -206,29 +242,42 @@ body {
 
 /* Miscellaneous */
 .button{
-    background-color: rgba(253, 129, 187, 0.3);
-    padding: 10px;
+    background-color: var(--primary);
+    color: var(--text-on-dark);
+    padding: var(--spacing-1) var(--spacing-2);
     text-decoration: none;
-    border-radius: 5%;
-    color: black;
+    border-radius: 4px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    box-shadow: var(--elevation-1);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-/* I only used button-outline on this project, but you may like the other one more */
 .button-outline{
-    border: 2px solid  rgba(253, 129, 187, 0.3);
-    padding: 10px;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: var(--spacing-1) var(--spacing-2);
     text-decoration: none;
-    border-radius: 5%;
-    color: black;
+    border-radius: 4px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .link{
     text-decoration: none;
+    color: var(--primary);
+    position: relative;
+    transition: color 0.3s ease;
 }
 
-/* I had to double this code, because of the :hover and :active on link above */
 .link-no-scale{
     text-decoration: none;
+    color: var(--primary);
 }
 
 .no-padding-list-item{
@@ -236,7 +285,7 @@ body {
 }
 
 .padding-list-10{
-    padding: 10px;
+    padding: var(--spacing-2);
 }
 
 .no-bullet-list{
@@ -245,66 +294,81 @@ body {
 /* ---------------------------------- */
 
 /* ANIMATIONS AND OTHER BEAUTIES */
+.button:hover, .button:active{
+    background-color: var(--primary-dark);
+    box-shadow: var(--elevation-2);
+}
+
 .button-outline:hover, .button-outline:active{
-    border: 2px solid  rgba(253, 129, 187, 0.3);
-    background-color: rgba(253, 129, 187, 0.6);
-    padding: 10px;
-    text-decoration: none;
-    border-radius: 5%;
-    color: rgb(255, 255, 255);
-    transition: background-color 1s ease, color 1s ease;
+    background-color: var(--primary);
+    color: var(--text-on-dark);
 }
 
 .link:hover, .link:active{
-    font-size: 1.2rem;
-    transform: scale(1.5);
-    transition: 1s ease-in-out;
-    /* second solution: */
-    /* font-size: 1.2rem; 
-    transition: font-size 2s ease-in-out;  */
+    color: var(--primary-dark);
 }
 
-.progress-bar:hover, .progress-bar:active {
-    box-shadow: 5px 5px 5px #cdadcd;
-    transition: box-shadow 1s ease;
+.link:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--primary-dark);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.link:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.card:hover {
+    box-shadow: var(--elevation-2);
+    transition: box-shadow 0.3s ease;
 }
 
 /* ---------------------------------- */
 
 /* NAV */
 nav {
-    margin-bottom: 30px;
+    margin-bottom: var(--spacing-4);
 }
 
 .main-nav{
-    background-color: rgb(253, 249, 249);
+    background-color: var(--surface);
     display: flex;
     list-style-type: none;
     justify-content: center;
-    padding: 20px;
+    padding: var(--spacing-2);
     margin: 0px;
+    box-shadow: var(--elevation-1);
 }
 
 .main-nav li {
-    padding: 5px 10px;
+    padding: var(--spacing-1) var(--spacing-2);
 }
 
 .main-nav li a {
-    color: #000000;
+    color: var(--text-on-light);
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 .main-nav li a:hover {
-    color: rgb(254, 175, 210);
-    text-decoration: none;
-    font-weight: bold;
+    color: var(--primary);
 }
 
 .sticky {
-    position: -webkit-sticky; /* for Safari */
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
-    align-self: flex-start; /* <-- this is the fix */
+    align-self: flex-start;
+    z-index: 1000;
 }
 
 /* Nav-icon */
@@ -313,24 +377,23 @@ nav {
 }
 
 #main-toggle{
-    border: 1px solid #df36854d;
+    border: 1px solid var(--secondary-light);
     float: right;
-    padding: 20px;
-    /* position: relative; */
+    padding: var(--spacing-2);
     user-select: none;
 }
 
 .nav-icon{
-    background-color: #df36854d;
+    background-color: var(--secondary);
     display: block;
     height: 3px;
-    width: 10px;
+    width: 18px;
     position: relative;
 }
 
 .nav-icon::before,
 .nav-icon::after{
-    background-color: #df36854d;
+    background-color: var(--secondary);
     content: "";
     display: block;
     height: 100%;
@@ -349,24 +412,19 @@ nav {
 
 /* FOOTER */
 footer{
-    color: #000000;
+    background-color: var(--secondary-dark);
+    color: var(--text-on-dark);
     text-align: center;
-    padding: 20px 0px;
+    padding: var(--spacing-4) 0px;
+    margin-top: var(--spacing-4);
 }
 /* ---------------------------------- */
 
 /* INTRODUCTION */
 .header-img{
-    border-radius: 70%;
+    border-radius: 50%;
+    box-shadow: var(--elevation-2);
 }
-/* ---------------------------------- */
-
-/* ARTICLE */
-/* Everything here is made with general classes. Find them in the GENERAL section */
-/* ---------------------------------- */
-
-/* ABOUT ME */
-/* Everything here is made with general classes. Find them in the GENERAL section */
 /* ---------------------------------- */
 
 /* SKILLS */
@@ -376,139 +434,109 @@ footer{
 }
 
 .progress-bar {
-    background-color: #353b48;
+    background-color: #e0e0e0;
     display: block;
-    height: 10px;
-    border-radius: 20px;
+    height: 8px;
+    border-radius: 4px;
+    margin-bottom: var(--spacing-3);
+    overflow: hidden;
 }
 
 .progress-bar span {
-    height: 10px;
+    height: 8px;
     float: left;
-    background: linear-gradient(135deg, rgb(250, 113, 283)0%, rgb(255, 142, 134)60%);
-    border-radius: 20px;
-    -webkit-background: linear-gradient(135deg, rgb(250, 113, 283) 0%, rgb(255, 142, 134) 60%);
-    -webkit-border-radius: 20px;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+    border-radius: 4px;
 }
 
 .html {
     width: 90%;
-    animation: html 3s;
+    animation: html 2s ease-out;
 }
 
 .css {
     width: 75%;
-    animation: css 3s;
+    animation: css 2s ease-out;
 }
 
 .javascript {
     width: 63%;
-    animation: javascript 3s;
+    animation: javascript 2s ease-out;
 }
 
 .php {
     width: 54%;
-    animation: php 3s;
+    animation: php 2s ease-out;
 }
 
 .comm-adapt {
     width: 90%;
-    animation: comm-adapt 3s;
+    animation: comm-adapt 2s ease-out;
 }
 
 .team-player {
     width: 85%;
-    animation: team-player 3s;
+    animation: team-player 2s ease-out;
 }
 
 .problem-solving {
     width: 82%;
-    animation: problem-solving 3s;
+    animation: problem-solving 2s ease-out;
 }
 
 .open-minded {
     width: 75%;
-    animation: open-minded 3s;
+    animation: open-minded 2s ease-out;
 }
 
 @keyframes html {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 90%;
-    }
+    0% { width: 0%; }
+    100% { width: 90%; }
 }
 
 @keyframes css {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 75%;
-    }
+    0% { width: 0%; }
+    100% { width: 75%; }
 }
 
 @keyframes javascript {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 63%;
-    }
+    0% { width: 0%; }
+    100% { width: 63%; }
 }
 
 @keyframes php {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 54%;
-    }
+    0% { width: 0%; }
+    100% { width: 54%; }
 }
 
 @keyframes comm-adapt {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 90%;
-    }
+    0% { width: 0%; }
+    100% { width: 90%; }
 }
 
 @keyframes team-player {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 85%;
-    }
+    0% { width: 0%; }
+    100% { width: 85%; }
 }
 
 @keyframes problem-solving {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 82%;
-    }
+    0% { width: 0%; }
+    100% { width: 82%; }
 }
 
 @keyframes open-minded {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 75%;
-    }
+    0% { width: 0%; }
+    100% { width: 75%; }
 }
 /* ---------------------------------- */
 
 /* PROJECTS */
-/* I also used these card settings on other sub-pages */
 .card{
-    box-shadow: 0 3px 10px rgb(127 110 187 / 0.2); 
-    padding: 20px;
+    background-color: var(--surface);
+    box-shadow: var(--elevation-1);
+    padding: var(--spacing-3);
+    border-radius: 4px;
+    transition: box-shadow 0.3s ease;
 }
 
 .box{
@@ -526,15 +554,11 @@ footer{
 
 .logo{
     width: 50px;
+    border-radius: 4px;
 }
 /* ---------------------------------- */
 
-/* SPECIAL THANKS */
-/* Everything here is made with general classes. Find them in the GENERAL section */
-/* ---------------------------------- */
-
 /* RESPONSIVENESS */
-/* Had to pay attention for that wondow.innerWidth when calculated max-width */
 @media screen and (max-width: 867px){
     body{
         font-size: 90%;
@@ -545,7 +569,7 @@ footer{
     }
 
     .large{
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
 
     .medium-spacing{
@@ -564,7 +588,7 @@ footer{
     }
 
     .small{
-        font-size: 0.6rem;
+        font-size: 0.75rem;
     }
 
     .max-width{
@@ -576,19 +600,19 @@ footer{
     }
 
     .padding-top{
-        padding-top: 10px;
+        padding-top: var(--spacing-2);
     }
     
     .padding-right{
-        padding-right: 10px;
+        padding-right: var(--spacing-2);
     }
 
     .padding-bottom{
-        padding-bottom: 10px;
+        padding-bottom: var(--spacing-2);
     }
     
     .padding-left{
-        padding-left: 10px;
+        padding-left: var(--spacing-2);
     }
 
     .logo{
@@ -596,11 +620,10 @@ footer{
     }
 }
 
-/* wrapper on home page looks better with this @media */
 @media screen and (max-width: 750px){
     .wrapper{
         flex-direction: column;
-        gap: 20px 0px;
+        gap: var(--spacing-3) 0px;
     }
 
     .column{
@@ -616,7 +639,6 @@ footer{
     }
 }
 
-/* media query for hamburger menu with dropdown */
 @media screen and (max-width: 510px){
     .main-nav{
         display: none;
@@ -624,12 +646,12 @@ footer{
 
     .toggle{
         display: block;
-        background-color: #ffffff;
-        border: 1px solid #fd81bb4d;
+        background-color: var(--surface);
+        border: 1px solid var(--secondary-light);
     }
     
     .toggle:hover{
-        background-color: #f0e7e7;
+        background-color: var(--background);
     }
     
     #drop:checked+.main-nav{
@@ -637,7 +659,7 @@ footer{
     }
 
     nav{
-        padding-bottom: 25px;
+        padding-bottom: var(--spacing-3);
     }
 
     .max-width{
@@ -645,15 +667,13 @@ footer{
     }
 }
 
-/* media query for smaller screens */
-/* smaller fonts were my way to go */
 @media screen and (max-width: 377px){
     body{
         line-height: 1.5rem;
     }
 
     .large{
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .medium-spacing{
@@ -661,7 +681,7 @@ footer{
     }
 
     .medium-spacing-halfsize{
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 
     .main-title{
@@ -675,59 +695,37 @@ footer{
 
 /* DARK THEME */
 @media (prefers-color-scheme: dark) {
+    :root {
+        --surface: #121212;
+        --background: #1e1e1e;
+        --text-on-light: rgba(255, 255, 255, 0.87);
+        --text-secondary: rgba(255, 255, 255, 0.6);
+    }
+    
     body {
-        background-color: rgba(45, 45, 45, 1);
-        color: white;
-    }
-
-    .baby-pink {
-        background-color: rgb(243, 162, 200);
-    }
-
-    .baby-pink-light {
-        background-color: rgba(45, 45, 45, 1);
-        border: 2px solid rgb(243, 162, 200);
+        background-color: var(--background);
+        color: var(--text-on-light);
     }
 
     .main-nav {
-        background-color: rgba(45, 45, 45, 1);
+        background-color: var(--surface);
     }
 
     .main-nav li a {
-        color: white;
+        color: var(--text-on-light);
     }
 
-    .main-nav li a:hover {
-        color: rgb(254, 175, 210);
+    .card {
+        background-color: var(--surface);
     }
 
     #main-toggle{
         border: 1px solid rgba(255, 255, 255, 0.6);
-        background-color: rgba(45, 45, 45, 1);
+        background-color: var(--surface);
     }
     
-    .nav-icon{
+    .nav-icon, .nav-icon::before, .nav-icon::after{
         background-color: rgba(255, 255, 255, 0.6);
-    }
-    
-    .nav-icon::before,
-    .nav-icon::after{
-        background-color: rgba(255, 255, 255, 0.6);
-    }
-
-    .button-outline{
-        border: 2px solid rgb(254, 175, 210);
-        color: white;
-    }
-
-    .button-outline:hover, .button-outline:active{
-        border: 2px solid rgb(254, 175, 210);
-        background-color: rgb(254, 175, 210);
-    }
-
-    .card{
-        box-shadow: 0 0px 0px; 
-        border: 2px solid rgb(254, 175, 210);
     }
 
     .logo{
@@ -742,14 +740,14 @@ footer{
         padding: 10px;
     }
 
-    footer{
-        color: white;
+    .progress-bar {
+        background-color: #424242;
     }
 
     @media screen and (max-width: 929px) {
-        .baby-pink-light {
-            margin-left: 10px;
-            margin-right: 10px;
+        .secondary-panel {
+            margin-left: var(--spacing-2);
+            margin-right: var(--spacing-2);
         }
     }
 }
