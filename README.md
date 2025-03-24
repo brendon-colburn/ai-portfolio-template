@@ -34,21 +34,19 @@ This template is a responsive portfolio website that can be used by developers, 
 
 ## Getting Started
 
-1. Fork this repository to your GitHub account by clicking the "Fork" button in the top right corner.
-2. Clone your forked repository to your local machine using the following command:
-
-   ```bash
-   git clone https://github.com/iluskaland/portfolio-template.git
+1. [Initial Setup of your Portfolio](https://scribehow.com/shared/How_To_Create_your_GitHub_Pages_Portfolio_Site_From_a_Fork__mJ9Y5G7PS6GOMvuM7Zf2Qw)
 
 Now, you have your own fork of the repository, and you can make changes and contributions as described in the "Contributing" section.
 
 ## Usage
 
-To view the live demonstration of this portfolio template, visit [this link](https://iluskaland.github.io/portfolio-template/index.html). You can customize the content and styles to create your own portfolio website. Feel free to replace the content with your information and add your projects.
+To view the live demonstration of this portfolio template, visit [this link](https://brendon-colburn.github.io/ai-portfolio-template/index.html). You can customize the content and styles to create your own portfolio website. Feel free to replace the content with your information and add your projects.
 
 ## Customization
 
 Customize this template by modifying the HTML and CSS files to match your personal information, skills, and projects. You can change the colors, fonts, and layout to create a unique portfolio.
+
+I have added a series of AI prompts that will aide you in the process of building out your portfolio faster
 
 ## Dark Mode Support
 
